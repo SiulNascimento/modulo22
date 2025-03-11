@@ -1,0 +1,60 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &_frontend {
+        background-image: linear-gradient(variables.$gradientblue, variables.$gradientpurple);
+    }
+    &_ui-ux {
+        background-image: linear-gradient(variables.$gradientpurple, variables.$gradientpink);
+    }
+    &_backend {
+        background-image: linear-gradient(variables.$gradientpink, variables.$gradientyellow);
+    }
+    &_bancodedados {
+        background-image: linear-gradient(variables.$gradientyellow, variables.$gradientpink);
+    }
+
+    &__img-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        color: variables.$gradienttext1;
+        gap: 40px;
+    }
+    &_img {
+        max-width: 360px;
+    }
+
+    &_details {
+        &_tittle {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &_description {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container{
+            display: block;
+        }
+
+        &_img {
+            width: 100%;
+        }
+
+        &_details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}

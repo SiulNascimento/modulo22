@@ -1,0 +1,50 @@
+@use 'variables';
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: variables.$gradienttext1;
+    display: flex;
+    justify-content: space-between;
+
+    &__infos {
+        display: flex;
+        gap: 20px;
+
+        &_itens {
+            font-size: 14px;
+            color: variables.$gradienttext2;
+
+            b {
+                font-size: 18px;
+                display: block;
+                color: variables.$gradienttext2;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &_info {
+            display: block;
+            gap: 20px;
+
+            &_itens {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @media (min-width: 640px) and (max-width: 1024px){
+        display: block;
+
+        &_info {
+            display: block;
+            gap: 20px;
+
+            &_itens {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
